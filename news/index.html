@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>AAA | News</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+        <script src="updates.js"></script>
+        <link rel="icon" href="/images/transparent.png">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.2.0/css/font-awesome.css">
+    </head>
+    <body>
+        <script src="updates.js"></script>
+        <div id="topbar">
+            <div id="lefttop">
+                <img src="/images/logo.png" alt="AAA"/>
+                <span name="title">ABWA Alumni Association</span>   
+            </div>
+            <div id="righttop">
+                <ul>
+                    <li><a href="/"><i class="fa fa-home"></i></a></li>
+                    <li><a href="/gallery/">GALLERY</a></li>
+                    <li>
+                        <a href="/about/">ABOUT</a>
+                        <ul id="submenu">
+                            <li><a href="/about/">The Council</a></li>
+                            <li>Alumni Programs</li>
+                            <li><a href="/about/contact-us/">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/mentorship/">MENTORSHIP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div id="menu" class="box">
+                <ul id="mmenu">
+                    <li onclick="createUpdates('alumni', 0)">Alumni News</li>
+                    <li onclick="createUpdates('council', 0)">Council Updates</li>
+                    <li onclick="createUpdates('school', 0)" type="last">School News</li>
+                </ul>
+            </div>
+            <div id="updates">
+            </div>
+        </div>
+        <!------JS Data-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../scripts/jquery.min.js">\x3C/script>')</script>
+        <script>
+            createUpdates('alumni', 0);
+            createUpdates('council', 0);
+            createUpdates('school', 0)
+        </script>
+    </body>
+</html>

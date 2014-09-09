@@ -1,0 +1,1 @@
+[{"name": "ABWA Alumni Admin","title":"Welcome","message": "Here, messages from school will be posted"}]

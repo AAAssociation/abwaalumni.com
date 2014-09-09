@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>AAA: ABWA Alumni Association</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+        <link rel="icon" href="images/transparent.png">
+        <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.2.0/css/font-awesome.css">
+        <link href="stylesheets/classic-081711.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        
+        <div id="topbar">
+            <div id="lefttop">
+                <img src="images/logo.png" alt="AAA"/>
+                <span name="title">ABWA Alumni Association</span>
+            </div>
+            <div id="righttop">
+                <ul>
+                    <li class="selected"><a href="/"><i class="fa fa-home"></i></a></li>
+                    <li><a href="/gallery/">GALLERY</a></li>
+                    <li>
+                        <a href="/about/">ABOUT</a>
+                        <ul id="submenu">
+                            <li><a href="/about/">The Council</a></li>
+                            <li>Alumni Programs</li>
+                            <li><a href="/about/contact-us/">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/mentorship/">MENTORSHIP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div id="updates" style="width: 73%; float: left;">
+                <div class="box black" id="dialog" >
+                    <span class="close" onclick="giveNews()">&#10006;</span>
+                    Hi, <br/><p>
+                    Welcome to the Aditya Birla World Academy Alumni Website! <br/>
+                    Here you can gain access to graduation pictures, our various events and programs, FAQs as well as access the Portal if you are an                         alumni.<br/></p>
+                    <p>
+                    You can simply click on the cross to close this Dialog Box and see the latest news in school, or you can simply have a look at our <a href="/sitemap/">sitemap</a> to navigate through the website.
+                    </p><p>
+                    Please <a href="/about/contact-us/">contact us</a> regarding any suggestions or issues with the website. </p>
+                </div>
+                
+            </div>
+            
+            <div id="side">
+                <div class="box" id="dialog">
+                    <input id="search" type="text" name="searchtext" placeholder="&#xf002; Search..." onfocus = "$('#results').addClass('show');" oninput="results(this.value);" onblur="$('#results').removeClass('show');">
+                    <div id="results" class="results">
+                    
+                    </div>
+                    <p>
+                        Please <a href="/about/contact-us/">contact us</a> regarding any suggestions or issues with the website. 
+                    </p>
+                </div>
+                <div class="box" id="signup">
+                    <!-- Begin MailChimp Signup Form -->
+                    <style type="text/css">
+                        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                        #mc_embed_signup .asterisk{font-size: 20px;}
+                        #mc_embed_signup input {height: auto;}
+                        #mc_embed_signup .mc-field-group .asterisk {top: 12px; right:default;}
+                        #mc_embed_signup .button {color: #000;}
+                    </style>
+                    <div id="mc_embed_signup">
+                    <form action="//abwaalumni.us3.list-manage.com/subscribe/post?u=378d6c3b59ca37ce0a27fc808&amp;id=43d2e58df7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <h3>Subscribe to our Newsletter:</h3>
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email Address<span class="asterisk">*</span>
+                    </label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                    </div>
+                    <div class="mc-field-group">
+                        <label for="mce-FNAME">First Name </label>
+                        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                    </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_378d6c3b59ca37ce0a27fc808_43d2e58df7" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </form>
+                    </div>
+                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+                </div>
+            </div>
+            <div class="box" id="firstfooter">
+                <b>About</b><br>
+                <p style="font-family:'Bank-Gothic';">Aditya Birla World Academy Alumni Association</p>
+                <p>Launched by the first batch graduating out of ABWA IBDP, the batch of 2012, the Alumni Association currently comprises of 3 batches and consists of 75 students. In the coming years, as the school adds the A-level system, there will be more students joining the association. The council comprises of a President and 6 members, with atleast one representative from every batch to help with the planning and organizing of events as well as setting the path for a larger association and council in the coming years.</p>
+            </div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="scripts/jquery.min.js">\x3C/script>')</script>
+        <script src="news/updates.js"></script>
+       <script>
+           function giveNews () {
+               createUpdates('council', 3);
+               createUpdates('school', 3);
+               createUpdates('alumni', 3);              
+           }
+           
+           function results(terms){
+               var streamer = document.getElementById('results');
+               streamer.innerHTML = "";
+                console.log(terms.length);
+               $.getJSON('https://spreadsheets.google.com/feeds/list/1TnWBEXAGsEh0-FIpPXf-AQsoMq1ThxGZ8UV4SR19WPA/oxxlphv/public/full?alt=json', function(data) {
+                for (var i = 0; i < data.feed.entry.length; i++) {
+                    var names = data.feed.entry[i].gsx$name.$t;
+                    if(names.toLowerCase().indexOf(terms.toLowerCase()) > -1){
+                        $( '#results' ).append( "<li>" + names + "</li>");
+                        console.log(names);
+                    }
+                }
+               });
+           }
+           
+           
+        </script>
+        </script>
+        <!--script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-52694782-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script-->
+    </body>
+</html>

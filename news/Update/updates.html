@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Upload Data</title>
+        <link rel="stylesheet" type="text/css" href="../../stylesheets/main.css">
+        <script src="../../news/updates.js"></script>
+        <link rel="icon" href="../../images/transparent.png">
+    </head>
+    <body>
+        <a id="lefttop" href = "http://www.abwaalumni.com" target = "_abwa">
+            <img src="../../images/logo.png" alt="AAA"/>
+            <span name="title">ABWA Alumni Association</span>
+        </a>
+        <div id="main" class="contact">
+            <div class="box" style="width: 70%; margin: 0 1%;">
+                <form name="uploadData" id="forms">
+                    <label>Name:*</label>
+                    <input type="text" name="name" required />
+                    <label>Title:*</label>
+                    <input type="text" name="title" required />
+                    <label>Details:*</label>
+                    <textarea name="message" class = "message" required></textarea>
+                    <br />
+                    <input type="submit" class="button" value="Send"/>
+                    <input type="reset" class="button" value="Clear"/>
+                </form>
+            </div>
+        </div>
+                <!------JS Data>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script-->
+        <script>window.jQuery || document.write('<script src="../../scripts/jquery.min.js">\x3C/script>')</script>
+        <script>
+            $.fn.serializeObject = function()
+            {
+                var o = {};
+                var a = this.serializeArray();
+                $.each(a, function() {
+                    if (o[this.name] !== undefined) {
+                        if (!o[this.name].push) {
+                            o[this.name] = [o[this.name]];
+                        }
+                        o[this.name].push(this.value || '');
+                    } else {
+                        o[this.name] = this.value || '';
+                    }
+                });
+                return o;
+            };
+
+            $(function() {
+                $('#forms').submit(function() {
+                    var data = JSON.stringify($('#forms').serializeObject());
+                    console.log(data);
+                    $.post("post.php", {formdata: data});
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>

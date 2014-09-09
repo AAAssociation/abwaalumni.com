@@ -1,0 +1,655 @@
+/************************************************
+
+Copyright 2014 Intelfinity: Website Service Section 
+
+Developer: Mahir Kothary GH: (@mahirk)
+
+MIT License
+
+************************************************/
+
+body {
+    width: 99%;
+    background-image: url('../images/bg.svg');
+    font-family: "trebuchet ms", sans-serif, calibri;
+    overflow-x:hidden;
+}
+
+@font-face{
+    font-family:'Bank-Gothic';
+    font-style:normal;
+    font-weight:400;
+    src:local('Bank-Gothic'), url('../fonts/BankGothic.ttf') format('truetype');
+}
+
+.fa-home {
+    font-size: 18px;
+}
+
+/**************************************
+Top Menu
+****************************************/
+
+#topbar {
+    width: 100%;
+    display:block;
+    height: 200px;
+    position:static;
+}
+
+#lefttop{
+    width: 225px;
+    float: left;
+    padding-left:30px;
+    font-size:28px;
+    font-family: 'Gafata', calibri;
+    text-align:center;
+}
+
+#lefttop img {
+    width: 50%;
+    margin-top: 10px;
+    display:block;
+    margin-left:25%;
+}
+
+#lefttop span[name="title"]{
+    font-family:'Bank-Gothic';
+    color: #000;
+    text-align:center;
+}
+a#lefttop{
+    text-decoration:none;
+}
+
+#righttop{
+    float: right;
+    margin-right: 5% !important;
+    font-weight: bold;
+    font-family: calibri;
+    line-height:22px;
+    display:inline-block;
+    margin-top: 3%;
+}
+
+#righttop ul {
+    margin-top:20px;
+    padding: 0;
+    list-style-type: none;
+    float:right;
+}
+
+#righttop ul li {
+    display:inline-block;
+    color: #000;
+    text-align:center;
+    margin:0;
+}
+
+#righttop ul li a{
+    text-decoration:none;
+    cursor:pointer;
+    color: #000;
+    padding: 8px 20px;
+    -webkit-border-radius: 8%;
+}
+
+#righttop ul li a:visited {
+    color: #000;
+}
+
+#righttop ul li a:hover,
+#righttop ul #submenu li:hover{
+    background-color: #FEE483;
+}
+
+#righttop .selected a{
+    background-color: #FEE483;
+}
+
+#righttop .selected li a{
+    background-color: #FFF;
+}
+/*****************************************
+Repeated Styles
+*****************************************/
+
+.box { 
+    margin: 0 0 20px 20px;
+    background: #fff; 
+    border: 4px solid #fff; 
+    position:sticky;
+    -webkit-border-radius: 2px; 
+    -moz-border-radius: 4px; 
+    -o-border-radius: 4px; 
+    border-radius: 2px; 
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.5); 
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.4); 
+    -o-box-shadow: 0 1px 1px rgba(0,0,0,.4); 
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5); 
+    zoom: 0; 
+    height: auto;
+    display:block;
+}
+
+.black {
+    background: rgba(0,0,0,.4);
+    border: 4px solid rgba(0,0,0,.5);
+    color:#fff;
+}
+
+/*#updates .box {
+   background:  rgba(255, 255, 255, 0.7);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}*/
+
+
+/****************************************
+Main
+*****************************************/
+
+#main {
+    width: 99%;
+    margin: 3% 30px;
+}
+
+#menu{
+    width: 75%;
+}
+
+#menu #mmenu {
+    font-weight: bold;
+    font-family: calibri;
+    margin: 0;
+    list-style-type: none;
+}
+
+#menu #mmenu li,
+#righttop ul{
+    display:inline-block;
+    color: #000;
+    text-align:center;
+    margin:0;
+    padding: 8px 20px;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+}
+
+#menu #mmenu li:hover {
+    background-color: #C31B1B;
+    color:#fff;
+}
+
+
+#menu #mmenu li:not([type="last"]):after {
+    content: "";
+    width: 1px;
+    height: 15px;
+    display: inline-block;
+    background-color: #333;
+    position: relative;
+    vertical-align:middle;
+    left: 20px;
+}
+
+#mmenu li:hover,
+#righttop ul li:hover
+{
+    visibility:inherit;
+}
+
+
+#mmenu li,
+#righttop ul li{
+    position:		relative;
+    z-index:99 !important;
+}
+
+#submenu,
+.results{
+    position:		absolute;
+    top:			-999em;
+    width:			171px; /* left offset of submenus need to match (see below) */
+    z-index:99 !important;
+    padding:10px 0 0 0 !important;
+    background-color: #fff;
+    -webkit-border-bottom-left-radius: 5px;
+    border: 2px solid #333;
+}
+
+#results {
+    max-height: 100%;
+    overflow-y:scroll;
+}
+#menu #mmenu li:hover #submenu,
+#righttop ul li:hover #submenu,
+#submenu:hover{
+    display:block;
+    z-index:99 !important;
+    top:0;
+    text-align:left;
+    top:2em;
+}
+
+.show{
+    visibility:visible;
+    display:block;
+    width: 85%;
+    position:absolute;
+    top:3em !important;
+    border: 1.5px solid #000;
+}
+
+#results li {
+    padding:5px;
+}
+
+#results li:hover {
+    background-image: -webkit-gradient(linear, 0 0, 0 50%, from(#C31B1B), to(#A11F1F));
+    background-image: -moz-linear-gradient(#C31B1B, #A11F1F);
+    background-image: -o-linear-gradient(#C31B1B, #A11F1F);
+    background-image: linear-gradient(#C31B1B, #A11F1F);
+    color: #fff;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#righttop ul li:hover #submenu{
+    top:1.7em;
+}
+
+#righttop ul #submenu li{
+    text-align:left;
+    padding: 5px;
+}
+
+#righttop ul #submenu {
+    float:left;
+    left: -0.5%;
+}
+
+#submenu li,
+#righttop ul #submenu li,
+#results li{
+    display:block;
+    font-family: 'Century Gothic';
+    font-size:10pt !important;
+    font-weight:normal;
+}
+
+#submenu li:after {
+    display:none !important;
+}
+#dialog {
+    position:relative;
+}
+#dialog a {
+    color: #33ccff;
+    text-decoration:none;
+}
+#dialog a:hover {
+    color: #333;
+    text-decoration:none;
+}
+#dialog .close {
+    position:absolute;
+    top: 0px;
+    right: 10px;
+    cursor:pointer;
+}
+
+#side {
+    width: 20%; 
+    float: right; 
+    margin: 0 5% 20px 0;
+}
+#side .box {
+    padding: 10px;
+}
+
+#side input {
+    width: 80%;
+    font-family:'FontAwesome', calibri;
+}
+#firstfooter{
+    display:inline-block;
+    padding: 10px;
+    top: 50px;
+    width: 68%;
+    position:relative;
+}
+
+
+/*****************************************
+Gallery Styles
+*****************************************/
+
+#gallery {
+    width: 85%;
+    display:none;
+    vertical-align:middle;
+    align-content:center;
+}
+
+#gallery  .block {
+    text-align:left;
+    color: #fff;
+    font-size: 18px;
+    font-family: Calibri;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin: 10px;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+    vertical-align: baseline;
+    -webkit-border-radius: 4%;
+    border:2px solid #333;
+}
+
+#gallery  .data {
+    display:none;
+    vertical-align: bottom;
+}
+
+#gallery .block:hover {
+    border:2px solid #333;
+}
+
+#gallery .block:hover .data {
+    display: block;
+    vertical-align: baseline;
+    color: #fff;
+    position:absolute;
+    top: 80%;
+    background-color: #333;
+    opacity: 0.90;
+    width: 190px;
+    height: inherit;
+    max-height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    max-width: 190px;
+    text-align: left;
+}
+
+#gallery .tile {
+    float:right;
+    position:relative;
+    display:inline-block;
+}
+
+/******************************************
+Forms
+*******************************************/
+
+label {
+    display: block;
+    text-align: left;
+    padding: 15px 0 15px 0;
+    font-family: calibri;
+    font-size: 11pt;
+}
+
+#forms {
+    padding: 30px;
+}
+input[type="text"]   {
+    width:50%;
+    font-family: 'Open Sans', calibri;
+    display:block;
+    border: 1px solid #999;
+    height: 20px;
+    padding: 10px;
+    -webkit-border-radius: 4px;
+}
+
+input:not([type="text"]) {
+    width:20%;
+    font-size: 9pt;
+    display:inline-block;
+    height: 35px;
+    padding: 10px;
+    -webkit-border-radius: 4px;
+}
+
+.message {
+    width:75%;
+    font-family: 'Open Sans', calibri;
+    display:block;
+    border: 1px solid #999;
+    height: 200px;
+    -webkit-border-radius: 4px;
+    padding: 10px;
+}
+textarea:focus, input:focus {
+    border: 1px solid #09C;
+    -webkit-border-radius: 4px;
+}
+#forms td {
+    width: 10%;
+    vertical-align:top;
+}
+
+.contact .box{
+    margin: 20px 0 60px 0;
+    display:inline-block;
+    width:24%;
+    font-size: 13px;
+    vertical-align:top;
+}
+
+.contact {
+    width: 90%;
+}
+
+#contactdetails{
+    text-align:left;
+    padding: 0 10px;
+}
+
+heading {
+    top: 10px;
+    display:block;
+    font-size: 12pt;
+    font-weight:bold;
+    padding: 8px;
+    font-family:'Open Sans', calibri;
+}
+/*************************************
+News
+**************************************/
+
+#updates .box {
+    width: 90%;
+    padding: 5px;
+}
+#updates {
+    display:block;
+    position:relative;
+}
+
+tag {
+    display: inline-block;
+    -webkit-border-radius:4px;
+    -moz-border-radius: 4px; 
+    -o-border-radius: 4px;
+    padding: 4px 7px 4px 7px;
+    font-size: 10px;
+    color: #fff;
+    width: auto;
+}
+
+tag[type='alumni']{
+    background-color: #31B404;
+}
+tag[type='council']{
+    background-color: #FF8000;
+}
+tag[type='school']{
+    background-color: #333;
+}
+
+#updates .news {
+    width: 26%;
+    display: inline-block;
+    vertical-align:top;
+}
+
+#updates heading {
+    display:inline-block;
+}
+
+#updates poster {
+    display:inline-block;
+    float:right;
+    padding: 5px;
+}
+
+#updates div[type="message"] {
+    padding:8px;
+    display:block;
+    text-align:justify;
+}
+
+#updates heading {
+}
+
+/************************************
+About
+************************************/
+
+#about {
+    width: 85%;
+    padding: 30px 10px;
+}
+
+#about hr {
+    width:80%;
+}
+
+#about .head {
+    font-size: 14pt;
+    font-weight:bold;
+    font-family:'Open Sans', calibri;
+    text-align:center;
+    display:block;
+}
+
+#about .head hr {
+    width: 65%;
+    top: 10px;
+}
+
+#about #info {
+    font-family:'Open Sans', calibri;
+    margin: 2px 15px 15px 15px;
+}
+
+#about heading {
+    font-size: 13pt;
+    margin: 10px 15px;
+    padding-left: 0;
+}
+#about p[name="employee"]{
+    -webkit-margin-before:2em;
+}
+#about p[name="employee"] img {
+    width: 150px;
+    position: relative;
+    display: block;
+    margin: 0 25px 0 25px;
+    border-radius: 20%;
+    border: 2px dashed #333;
+}
+#about p[name="employee"] name {
+    display:inline-block;
+    font-family: calibri;
+    font-size: 25px;
+    padding: 0 11px 12px 0px;
+}
+#about p[name="employee"] bio {
+    padding: 5px 10px 12px 0;
+    display: block;
+    text-align:justify;
+}
+#about p[name="employee"] img{
+    float: left;
+}
+
+#about p[name="employee"][type="right"] name,
+#about p[name="employee"][type="right"] bio{
+    padding-left:25px;
+}
+
+#about p[name="employee"][type="right"] img{
+    float:right;
+}
+
+/***************************************************
+Buttons  
+***************************************************/
+
+.button{
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    font:11px/normal sans-serif;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    -moz-background-clip: padding; /* for Firefox 3.6 */
+    background-clip: padding-box;
+    border-radius: 0.2em;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button.active{
+    border-color: #FEE483;
+    border-bottom-color:  #C31B1B;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    color: #fff;
+    background-color: #C31B1B;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#C31B1B), to(#A11F1F));
+    background-image: -moz-linear-gradient(#C31B1B, #A11F1F);
+    background-image: -o-linear-gradient(#C31B1B, #A11F1F);
+    background-image: linear-gradient(#C31B1B, #A11F1F);
+}
+
+.button:active,{
+    border-color: #FEE483;
+    border-bottom-color:  #FEE483;
+    background-color: #C31B1B;
+    background-image: -webkit-gradient(linear, 0 0, 0 50%, from(#C31B1B), to(#A11F1F));
+    background-image: -moz-linear-gradient(#C31B1B, #A11F1F);
+    background-image: -o-linear-gradient(#C31B1B, #A11F1F);
+    background-image: linear-gradient(#C31B1B, #A11F1F);
+}
+
+
+
+/* overrides extra padding on button elements in Firefox */
+.button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
