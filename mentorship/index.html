@@ -34,13 +34,13 @@
         <div id="main">
             <div id="menu" class="box">
                 <ul id="mmenu">
-                    <li>General FAQ's</li>
-                    <li>
-                        Post IB FAQ's
+                    <li id="general" class="selection" onclick="aa()">General FAQ's</li>
+                    <li id="post-IB">
+                        <span onclick="a()">Post IB FAQ's</span>
                         <ul id="submenu">
-                            <li>Indian Colleges</li>
-                            <li>US Universities</li>
-                            <li>UK Universities</li>
+                            <li onclick="b('india')">Indian Colleges</li>
+                            <li onclick="b('us')">US Universities</li>
+                            <li onclick="b('uk')">UK Universities</li>
                             <li>Gap Year</li>
                         </ul>
                     </li>
@@ -48,12 +48,117 @@
                 </ul>
             </div>
             <div id="mentorship">
+                <div id="general-faq">
+                    <faq id="1" data-filter="general">
+                       <span class="question">What is the Mentorship Programme?</span>
+                        <span class = "answer">Going through IB, the first two batches didn’t have a lot of guidance from any alumni regarding the school or the teachers. In order to help new students and make contact between students and alumni easier. Using the data from the student and volunteer alumni the mentorship programme heads pair up each student with an alumni.</span>
+                    </faq>
+                    <faq id="2" data-filter="general">
+                        <span class="question">Who can I contact for a change in mentor?</span>
+                        <span class = "answer">You can email mentorship@abwaalumni.com or to info@abwaalumni.com and we will help out with the same.</span>
+                    </faq>
+                    <faq id="3" data-filter="general">
+                        <span class="question">How long does the mentor stay with you for?</span>
+                        <span class = "answer">Your mentor stays with you throughout your two years of IB, although you are free to emails others (or the email ID above) with your questions.</span>
+                    </faq>
+                    <faq id="4" data-filter="general">
+                        <span class="question">How are the mentor-mentees matched?</span>
+                        <span class = "answer">Based on the profile data sent in from both the alumni and the students, matches are made and the profile data is sent to both the parties to ensure they agree to the match</span>
+                    </faq>
+                    <faq id="5" data-filter="general">
+                        <span class="question">How do I know which alumni has gone to which university?</span>
+                        <span class = "answer">As of now we have an unofficial list on our Drive, send us an email and we will send you the link to the list, till we get the list on the website</span>
+                    </faq>
+                </div>
                 
+                <div id="postib-faq" class="display-hide">
+                    <span id="section-india">
+                        <faq id="placement-I" class="placement" data-filter="india">
+                           <span class="question block">FAQ's for Indian Colleges</span> 
+                        </faq>
+                        <faq id="1" data-filter="india">
+                           <span class="question">How hard is the transition from IB to the Indian Board?</span>
+                            <span class = "answer">The shift is more often than not easy, the heavy IB work load doesn’t compare to the work load in college however most people take on more activities within college and at an office in order to make up for the work load as well as build up a resume.</span>
+                        </faq>
+                        <faq id="2" data-filter="india">
+                            <span class="question">How difficult is the admission process for an IB student?</span>
+                            <span class = "answer">It various from person to person, grades and extra-curricular activities play a large role in the admissions in colleges, this is something which should be discussed with the principal of the college and the counsellor in school.</span>
+                        </faq>
+                        <faq id="3" data-filter="india">
+                            <span class="question">	What IB grade is considered ideal for an IB student applying to an Indian college?</span>
+                            <span class = "answer">The grade conversion from IB to Indian colleges is tricky. It follows a chart (will be linked here soon) which is accessible from the school counsellor, which will come in handy when the predictive grades are being decided.</span>
+                        </faq>
+                    </span>
+                    <span id="section-us">
+                        <faq id="placement-US" class="placement" data-filter="us">
+                           <span class="question block">FAQ's for US Colleges</span> 
+                        </faq>
+                        <faq id="1" data-filter="us">
+                           <span class="question">When should you start applying?</span>
+                            <span class = "answer">Typically the applications open in the first week of August for the Common Application and by the end of September for all other individual applications.</span>
+                        </faq>
+                        <faq id="2" data-filter="us">
+                            <span class="question">What are required tests I would have to give?</span>
+                            <span class = "answer">Most school require the SAT or the ACT, either one of them will do, the average score required for each school would depend on the admissions department of the university as well as the major which you are applying for. Along with that IB English is good course for English Proficiency skills, however a few schools ask for the TOEFL or the IELTS exams. </span>
+                        </faq>
+                        <faq id="3" data-filter="us">
+                            <span class="question">	How many universities should I apply to? (UK also)</span>
+                            <span class = "answer">Usually students apply to any number between 7 and 10 universities including a couple low-level back-up universities.</span>
+                        </faq>
+                        <faq id="4" data-filter="us">
+                            <span class="question">When does the Common App open and what is the deadline to submit it?</span>
+                            <span class = "answer">The Common App opens in the first week of August and the deadlines depend on the universities, and the type of application, a few have <b>“Early Admission”</b>, <b>“Early Decision”</b> or <b>“Rolling Admissions"</b></span>
+                        </faq>
+                    </span>
+                    <span id="section-uk">
+                        <faq id="placement-UK" class="placement" data-filter="uk">
+                           <span class="question block">FAQ's for UK Colleges</span> 
+                        </faq>
+                        <faq id="1" data-filter="uk">
+                           <span class="question">How long is the college program?</span>
+                            <span class = "answer">Course durations vary, however the typical number of years are usually 3, or 4 (with experience). The reason is that study in UK is focused and delves directly into the subject of interest. In the US, a multi-subject initiative is taken in the first year, allowing students to specialise from second year on. It is important, to know that UK is stricter in changing subjects as compared to the US. </span>
+                        </faq>
+                        <faq id="2" data-filter="uk">
+                            <span class="question">What is a conditional offer?</span>
+                            <span class = "answer">As the name suggests, it is an offer with specified conditions that an applicant must achieve in order to have a confirmed offer. In the rare case of a student having absolutely brilliant credentials, the college might give them an “unconditional offer”, in which case the student’s entry into the college is secured.... </span>
+                        </faq>
+                        <faq id="3" data-filter="uk">
+                            <span class="question">	When does the UCAS open and what is the deadline to submit it?</span>
+                            <span class = "answer">A few basic dates, as per last year’s application, are as follows (I recommend you visit the <a href="http://goo.gl/XJanJY"> website</a> for all the up-to-date information)</span>
+                        </faq>
+                   </span>
+                </div>
             </div>
         </div>
         <!------JS Data-->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../scripts/jquery.min.js">\x3C/script>')</script>
+        <script>
+            function aa(){
+                $('#postib-faq').addClass('display-hide');
+                $('#post-IB').removeClass('selection');
+                $('#general-faq').removeClass('display-hide');
+                $('#general').addClass('selection');
+            }
+            function a() {
+                $('#postib-faq').removeClass('display-hide');
+                $('#post-IB').addClass('selection');
+                $('#general-faq').addClass('display-hide');
+                $('#general').removeClass('selection');
+                $('#section-us').removeClass('display-hide');
+                $('#section-uk').removeClass('display-hide');
+                $('#section-india').removeClass('display-hide');
+            }
+            function b(filter){
+                a();
+                
+                $('#section-us').addClass('display-hide');
+                $('#section-uk').addClass('display-hide');
+                $('#section-india').addClass('display-hide');
+                var value="section-" + filter;
+                $('#' + value).removeClass('display-hide');
+            }
+        </script>
         <!--script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
