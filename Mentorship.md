@@ -1,7 +1,6 @@
 Mentorship FAQ’s
 ==============
 
-[TOC]
 
 **General FAQs**
 -------------
