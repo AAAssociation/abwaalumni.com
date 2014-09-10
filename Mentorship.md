@@ -1,6 +1,8 @@
 Mentorship FAQ’s
 ==============
 
+[TOC]
+
 **General FAQs**
 -------------
 
@@ -54,15 +56,15 @@ As the name suggests, it is an offer with specified conditions that an applicant
 
 3.	When does the UCAS open and what is the deadline to submit it?
 > A few basic dates, as per last year’s application, are as follows (I recommend you visit the <a href="http://goo.gl/XJanJY"> website </a>for all the up-to-date information)
->-1 September 2013
+*1 September 2013
 Applications begin from mid-September.
->-15 October 2013
+*15 October 2013
 Applications for Oxford, Cambridge or any course in medicine, dentistry and veterinary medicine/science should arrive at UCAS by midnight. The reference has to be completed before the application can be sent to us.
->-15 January 2014
+*15 January 2014
 Applications for the majority of courses should arrive at UCAS by 18:00 today (check course details for the correct deadline). The reference has to be completed before your application can be sent to us.
->-25 February 2014
+*25 February 2014
 Extra begins
->-24 March 2014
+*24 March 2014
 Applications for some art and design courses should arrive at UCAS by 18:00 today (others have a 15 January deadline – check course details to confirm the correct deadline). The reference has to be completed before your application can be sent to us.
 
 **Gap Year**
