@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
         <link rel="icon" href="/images/transparent.png">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.2.0/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-4.2.0/css/font-awesome.css">
     </head>
     <body>
         <div id="topbar">
@@ -37,15 +37,46 @@
                 <heading>Info:</heading>
                 <div id="info">Launched by the first batch graduating out of ABWA IBDP, the batch of 2012, the Alumni Association currently comprises of 3 batches and consists of 75 students. In the coming years, as the school adds the A-level system, there will be more students joining the association. The council comprises of a President and 6 members, with atleast one representative from every batch to help with the planning and organizing of events as well as setting the path for a larger association and council in the coming years.</div>
                 <hr>
-                <heading>Council:</heading>
-                <div id="council">
-                    To be updated soon...
+                <heading>Council: (In order of terms on council)</heading>
+                <div id="council" class="box black">
+                    <div id="images">
+                        <span onclick="member('Yash')"><img src="/images/Yash.jpg"><br>Yash Bhansali</span>
+                        <span onclick="member('Asesha')"><img src="/images/Asesha.jpg"><br>Asesha Dayal</span>
+                        <span onclick="member('Mahir')"><img src="/images/Mahir.jpg"><br>Mahir Kothary</span>
+                        <span onclick="member('Arnav')"><img src="/images/Arnav.jpg"><br>Arnav Bhandari</span>
+                        <span onclick="member('Krushank')"><img src="/images/Krushank.jpg"><br>Krushank Shah</span>
+                        <span onclick="member('Milvin')"><img src="/images/Milvin.jpg"><br>Milvin Shroff</span>
+                        <span onclick="member('Ravi')"><img src="/images/Ravi.jpg"><br>Ravi Chandak</span>
+                    </div>
+                </div>
+                <div id="councildetails">
+                    <span id="placement">Please click on a Council Member to know more about them</span>
+                    <img id="memberimg" src="">
+                    <p id="details" class="display-hide">
+                        <name id="name"></name>
+                        <bio id="bio"></bio>
+                    </p>
+                    
                 </div>
             </div>
-        </div>
+        </div>      
         <!------JS Data-->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../scripts/jquery.min.js">\x3C/script>')</script>
+        <script>
+            function member(name){
+                $('#details').removeClass('display-hide');
+                $('#placement').remove();
+                $.getJSON("members.js", function (data) {
+                    console.log(data);
+                    document.getElementById('name').innerHTML = name + " " + data[name][0];
+                    document.getElementById('memberimg').src = "/images/" + name + ".jpg";
+                    document.getElementById('bio').innerHTML = data[name][1];
+                });
+                          
+                
+            }
+        </script>
         <!--script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

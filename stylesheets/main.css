@@ -574,36 +574,90 @@ About
 #about p[name="employee"]{
     -webkit-margin-before:2em;
 }
-#about p[name="employee"] img {
+#council img,
+#councildetails img{
     width: 150px;
-    position: relative;
+    position:relative;
     display: block;
-    margin: 0 25px 0 25px;
-    border-radius: 20%;
-    border: 2px dashed #333;
+    margin: 0px 25px 0px 25px;
+    border-radius: 40%;
 }
-#about p[name="employee"] name {
+
+#councildetails img{
+    width: 200px;
+    display:inline-block;
+    float:left;
+}
+
+#council span{
+    display: inline-block;
+    text-align:center;
+    cursor:pointer;
+    padding: 10px 0 5px 0 ;
+}
+
+#council span:hover{
+    color: #000;
+    background-color:#fff;
+    border-radius: 10%;
+}
+
+#councildetails name {
     display:inline-block;
     font-family: calibri;
     font-size: 25px;
-    padding: 0 11px 12px 0px;
-}
-#about p[name="employee"] bio {
-    padding: 5px 10px 12px 0;
-    display: block;
-    text-align:justify;
-}
-#about p[name="employee"] img{
-    float: left;
+    padding: 0 11px 5px 0px;
 }
 
-#about p[name="employee"][type="right"] name,
-#about p[name="employee"][type="right"] bio{
-    padding-left:25px;
+
+#councildetails p bio{
+    padding: 10px 10px 12px 0;
+    display:block;
+    word-wrap:break-word;
+}
+#images {
+    width:1475px;
 }
 
-#about p[name="employee"][type="right"] img{
-    float:right;
+#council{
+    width: 95%;
+    background-image: -webkit-gradient(linear, 0 0, 0 50%, from(#C31B1B), to(#A11F1F));
+    background-image: -moz-linear-gradient(#C31B1B, #A11F1F);
+    background-image: -o-linear-gradient(#C31B1B, #A11F1F);
+    background-image: linear-gradient(#C31B1B, #A11F1F);  
+    padding: 2% 2% 2% 1%;
+    margin: 0 0 20px 10px;
+    overflow-x:scroll;
+}
+
+#councildetails{
+    width:95%;
+    display:block;
+    margin: 0 0 20px 10px;
+    padding: 2% 2% 2% 1%;
+    border: 5px dashed #333;
+    min-height:200px;
+}
+
+#placement{
+    vertical-align:middle;
+    font-size: 18px;
+    color: #999;
+}
+#council::-webkit-scrollbar {
+    width: 0.5em;
+    opacity: 50%;
+}
+ 
+#council::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
+    opacity: 30%;
+}
+ 
+#council::-webkit-scrollbar-thumb {
+    background-color: #333;
+    outline: 1px solid slategrey;
+    opacity: 50%;
 }
 
 /***************************************************
