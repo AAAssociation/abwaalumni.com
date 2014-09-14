@@ -621,10 +621,7 @@ About
 
 #council{
     width: 95%;
-    background-image: -webkit-gradient(linear, 0 0, 0 50%, from(#C31B1B), to(#A11F1F));
-    background-image: -moz-linear-gradient(#C31B1B, #A11F1F);
-    background-image: -o-linear-gradient(#C31B1B, #A11F1F);
-    background-image: linear-gradient(#C31B1B, #A11F1F);  
+    background-image: url('/images/bg2.svg');
     padding: 2% 2% 2% 1%;
     margin: 0 0 20px 10px;
     overflow-x:scroll;
