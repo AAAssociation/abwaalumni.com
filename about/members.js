@@ -1,7 +1,7 @@
 ﻿
     {
         "Yash": ["Bhansali", "Yash is a junior at NYU Stern, studying Marketing and Psychology. He has a strong passion for startup businesses, especially ones that use technology in a meaningful way. He enjoys traveling and wildlife photography. When he’s not working or hanging out with friends, he’s usually going through random things on the internet with some electronic music in the background. Yash has been involved with the ABWA Alumni Association since its inception."],
-        "Asesha": ["Dayal", "Bio Data 2"],
+        "Asesha": ["Dayal", "Asesha is a sophomore at Denison University, where she is majoring in economics and communication. At Denison she is involved in Residential Education and the Leadership Fellows. Asesha is currently involved in organizing a double session of LeaderShape, which focuses on creating a just, caring, and thriving world where all lead with integrity and a healthy disregard for the impossible. Her other interests include baking, community service, editorial work, photography, travel and organizing events."],
         "Mahir":["Kothary", "Mahir is a sophomore pursuing Computer Science with a minor in Entrepreneurship at UW. He has previously interned at Viacom, VMware and IBM. He loves, taking on programming as well as hardware projects - with an interest in IoT and BigData, EDM and revels in blending art and technology in digital photography."],
         "Arnav":["Bhandari", "Helllo"],
         "Krushank":["Shah", "One more"],
