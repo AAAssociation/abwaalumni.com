@@ -10,12 +10,12 @@
         <link href="stylesheets/classic-081711.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        
+
         <div id="topbar">
-            <div id="lefttop">
-                <img src="images/logo.png" alt="AAA"/>
+          <a id="lefttop" href = "http://www.abwaalumni.com">
+                <img src="/images/logo.png" alt="AAA"/>
                 <span name="title">ABWA Alumni Association</span>
-            </div>
+            </a>
             <div id="righttop">
                 <ul>
                     <li class="selected"><a href="/"><i class="fa fa-home"></i></a></li>
@@ -44,17 +44,17 @@
                     </p><p>
                     Please <a href="/about/contact-us/">contact us</a> regarding any suggestions or issues with the website. </p>
                 </div>
-                
+
             </div>
-            
+
             <div id="side">
                 <div class="box" id="dialog">
                     <input id="search" type="text" name="searchtext" placeholder="&#xf002; Search..." onfocus = "$('#results').addClass('show');" oninput="results(this.value);" onblur="$('#results').removeClass('show');">
                     <div id="results" class="results">
-                    
+
                     </div>
                     <p>
-                        Please <a href="/about/contact-us/">contact us</a> regarding any suggestions or issues with the website. 
+                        Please <a href="/about/contact-us/">contact us</a> regarding any suggestions or issues with the website.
                     </p>
                 </div>
                 <div class="box" id="signup">
@@ -103,9 +103,9 @@
            function giveNews () {
                createUpdates('council', 3);
                createUpdates('school', 3);
-               createUpdates('alumni', 3);              
+               createUpdates('alumni', 3);
            }
-           
+
            function results(terms){
                var streamer = document.getElementById('results');
                streamer.innerHTML = "";
@@ -120,8 +120,8 @@
                 }
                });
            }
-           
-           
+
+
         </script>
         </script>
         <!--script>
@@ -129,10 +129,10 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-52694782-1', 'auto');
       ga('send', 'pageview');
-    
+
     </script-->
     </body>
 </html>

@@ -1,14 +1,12 @@
 
 <?php
 $forms = $_POST['formdata'];
-$file = "../school.js";
+$value = $_POST['value'];
+$file = "../".$value.".js";
 $codeer = file_get_contents($file);
-$codeer = str_replace("]",",".$forms."]",$codeer);
+$vals= $forms;
+$codeer = str_replace("]",",".stripslashes($vals)."]",$codeer);
 $send = file_put_contents($file, $codeer);
 ?>
-<script>
-	window.location = 'http://abwaalumni.com';
-</script>
 <?php
 ?>
- 

@@ -19,6 +19,12 @@
                     <input type="text" name="name" required />
                     <label>Title:*</label>
                     <input type="text" name="title" required />
+                    <label>News About?:*</label>
+                    <select id="selected">
+                      <option value="alumni">Alumni</option>
+                      <option value="school">School</option>
+                      <option value="council">Council</option>
+                   </select>
                     <label>Details:*</label>
                     <textarea name="message" class = "message" required></textarea>
                     <br />
@@ -51,8 +57,9 @@
             $(function() {
                 $('#forms').submit(function() {
                     var data = JSON.stringify($('#forms').serializeObject());
-                    console.log(data);
-                    $.post("post.php", {formdata: data});
+                    var edits = $( "#selected" ).val();
+                    $.post("post.php", {formdata: data, value: edits});
+                    window.location = 'http://abwaalumni.com/news/';
                     return false;
                 });
             });

@@ -13,7 +13,7 @@ function createUpdates(typeNews, limit) {
             max = data.length -3;
         }
         for(var i = data.length-1; i >= max; i--){
-             items.push("<heading>" + data[i]["title"] + "</heading><poster>" + "By:  " + data[i]["name"] + " <tag type='" + typeNews + "'>" + tag + "</tag>"+ "</poster><div type=" + "message" +">" + data[i]["message"] + "</div>" );
+             items.push("<heading>" + data[i]["title"] + "</heading><br/><poster>" + "By:  " + data[i]["name"] + " <tag type='" + typeNews + "'>" + tag + "</tag>"+ "</poster><div type=" + "message" +">" + data[i]["message"] + "</div>" );
             $("<div />", {
            "class": "box news",
            "id": typeNews,
@@ -21,8 +21,8 @@ function createUpdates(typeNews, limit) {
         }).appendTo("#updates");
             items=[];
         }
-        
-        
+
+
     });
-    
+
 }
